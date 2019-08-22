@@ -88,8 +88,8 @@ function Passaro(alturaJogo){
     window.onmousedown = e => voando = true
     window.onmouseup = e => voando = false
 
-    document.querySelector('body').addEventListener('touchstart', sobe)
-    document.querySelector('body').addEventListener('touchend', desce)
+    // document.querySelector('body').addEventListener('touchstart', sobe)
+    // document.querySelector('body').addEventListener('touchend', desce)
 
     function sobe(ev) {
         voando = true
