@@ -87,15 +87,10 @@ function Passaro(alturaJogo){
     window.onkeyup = e => voando = false
     window.onmousedown = e => voando = true
     window.onmouseup = e => voando = false
-    window.addEventListener('touchstart', sobe)
-    window.addEventListener('touchend', desce)
 
-    function sobe(ev) {
-        voando = true
-    }
-    function desce(ev) {
-        voando = false
-    }
+    document.querySelector('body').addEventListener('touchstart', sobe)
+    document.querySelector('body').addEventListener('touchend', desce)
+
     this.animar = () => {
         const novoY = this.getY() + (voando ? 8 : -5 )
         const alturaMaxima = alturaJogo - this.elemento.clientHeight
